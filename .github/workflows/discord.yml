@@ -1,0 +1,22 @@
+name: Send commits to Discord
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post commit message to Discord
+        run: |
+          for commit in $(jq -c '.commits[]' $GITHUB_EVENT_PATH); do
+            author=$(echo $commit | jq -r '.author.name')
+            message=$(echo $commit | jq -r '.message' | sed 's/"/\\"/g')
+            url=$(echo $commit | jq -r '.url')
+            curl -H "Content-Type: application/json" \
+              -X POST \
+              -d "{\"content\": \"**$author** pushed: $message (<$url>)\"}" \
+              ${{ secrets.DISCORD_WEBHOOK }}
+          done
