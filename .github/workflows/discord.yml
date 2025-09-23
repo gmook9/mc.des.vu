@@ -3,7 +3,7 @@ name: Send commits to Discord
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   notify:
@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Post commit message to Discord
         run: |
-          commits=$(jq -r '.commits[] | "- [@\(.author.name)](https://github.com/\(.author.username)) ([\(.id[0:7])](\(.url))): \(.message)"' $GITHUB_EVENT_PATH | tr '\n' '\n')
+          commits=$(jq -r '.commits[] | "- [@\(.author.name)](https://github.com/\(.author.username)) (#[\(.id[0:7])](\(.url))): \(.message)"' $GITHUB_EVENT_PATH | tr '\n' '\n')
           if [ -n "$commits" ]; then
             payload=$(jq -n --arg content "$commits" '{content: $content}')
             curl -H "Content-Type: application/json" \
