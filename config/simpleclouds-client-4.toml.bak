@@ -42,7 +42,7 @@ showVivecraftNotice = true
 	#Specifies the attenuation distance for thunder. The lower the value, the quieter it will be from longer distances.
 	#Default: 2000
 	#Range: 100 ~ 20000
-	thunderAttenuationDistance = 2000
+	thunderAttenuationDistance = 1280
 
 #Visual
 [visual]

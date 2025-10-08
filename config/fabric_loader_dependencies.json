@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "overrides": {
+    "betterend": {
+      "+depends": {
+        "entity_model_features": "*",
+        "entity_texture_features": "*"
+      }
+    },
+    "bclib": {
+      "+depends": {
+        "entity_model_features": "*",
+        "entity_texture_features": "*"
+      }
+    }
+  }
+}

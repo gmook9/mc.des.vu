@@ -27,7 +27,7 @@ showVivecraftNotice = true
 	#Specifies the type of world fog that should be used. Each has their own advantages and disadvantages, ranging from visual discrepancies to possible compatibility issues.
 	#Default: SCREEN_SPACE
 	#Allowed Values: VANILLA, SCREEN_SPACE, OFF
-	fogMode = "SCREEN_SPACE"
+	fogMode = "VANILLA"
 	#Specifies the angle of the rain, perpendicular to the ground. Higher values makes it more horizontal.
 	#Default: 15.0
 	#Range: 0.0 ~ 45.0
@@ -110,11 +110,11 @@ showVivecraftNotice = true
 		#Specifies how many frames it should take to generate the entire cloud mesh. Higher values will improve performance at the cost of stuttery cloud movement.
 		#Default: 5
 		#Range: 1 ~ 32
-		framesToGenerateMesh = 12
+		framesToGenerateMesh = 32
 		#Used to set the target FPS with the 'Target FPS' option in 'Generation Interval'.
 		#Default: 30
 		#Range: 1 ~ 1000
-		targetMeshGenFps = 170
+		targetMeshGenFps = 200
 
 #Debug
 [debug]

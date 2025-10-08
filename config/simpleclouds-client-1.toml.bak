@@ -27,7 +27,7 @@ showVivecraftNotice = true
 	#Specifies the type of world fog that should be used. Each has their own advantages and disadvantages, ranging from visual discrepancies to possible compatibility issues.
 	#Default: SCREEN_SPACE
 	#Allowed Values: VANILLA, SCREEN_SPACE, OFF
-	fogMode = "SCREEN_SPACE"
+	fogMode = "VANILLA"
 	#Specifies the angle of the rain, perpendicular to the ground. Higher values makes it more horizontal.
 	#Default: 15.0
 	#Range: 0.0 ~ 45.0
@@ -43,6 +43,12 @@ showVivecraftNotice = true
 	#Default: 2000
 	#Range: 100 ~ 20000
 	thunderAttenuationDistance = 1280
+	#Specifies if new rain sounds should replace the vanilla ones.
+	#Default: true
+	customRainSounds = true
+	#Specifies if custom rain rendering should be used. Automatically disabled when using Pretty/Particle Rain.
+	#Default: true
+	renderCustomRain = true
 
 #Visual
 [visual]
@@ -83,7 +89,7 @@ showVivecraftNotice = true
 	#Specifies the quality of the level of detail. A lower setting makes clouds lower quality faster.
 	#Default: HIGH
 	#Allowed Values: LOW, MEDIUM, HIGH
-	levelOfDetail = "HIGH"
+	levelOfDetail = "MEDIUM"
 	#Culls cloud chunks not visible to the player. Generally should not be disabled, but can fix visual issues when looking around fast with higher frames per mesh generation values.
 	#Default: true
 	frustumCulling = true
@@ -104,11 +110,11 @@ showVivecraftNotice = true
 		#Specifies how many frames it should take to generate the entire cloud mesh. Higher values will improve performance at the cost of stuttery cloud movement.
 		#Default: 5
 		#Range: 1 ~ 32
-		framesToGenerateMesh = 2
+		framesToGenerateMesh = 32
 		#Used to set the target FPS with the 'Target FPS' option in 'Generation Interval'.
 		#Default: 30
 		#Range: 1 ~ 1000
-		targetMeshGenFps = 90
+		targetMeshGenFps = 200
 
 #Debug
 [debug]

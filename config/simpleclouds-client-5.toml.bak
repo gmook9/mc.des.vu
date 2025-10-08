@@ -42,7 +42,7 @@ showVivecraftNotice = true
 	#Specifies the attenuation distance for thunder. The lower the value, the quieter it will be from longer distances.
 	#Default: 2000
 	#Range: 100 ~ 20000
-	thunderAttenuationDistance = 2000
+	thunderAttenuationDistance = 1280
 
 #Visual
 [visual]
@@ -104,11 +104,11 @@ showVivecraftNotice = true
 		#Specifies how many frames it should take to generate the entire cloud mesh. Higher values will improve performance at the cost of stuttery cloud movement.
 		#Default: 5
 		#Range: 1 ~ 32
-		framesToGenerateMesh = 5
+		framesToGenerateMesh = 2
 		#Used to set the target FPS with the 'Target FPS' option in 'Generation Interval'.
 		#Default: 30
 		#Range: 1 ~ 1000
-		targetMeshGenFps = 35
+		targetMeshGenFps = 90
 
 #Debug
 [debug]

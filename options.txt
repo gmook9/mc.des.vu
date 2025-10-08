@@ -42,7 +42,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:7
 renderClouds:"false"
-resourcePacks:["builtin/plank_consistency","builtin/emissive_ores_compatibility","vanilla","mod_resources","Moonlight Mods Dynamic Assets","builtin/add_pack_finders_test","fabric","netherexp:jne_emissive","netherexp:jne_retextures","file/fresh particles.zip","builtin/client/deep_aether_tooltips","builtin/client/deep_aether_additional_assets","file/-1.21.2 Fresh Moves v3.1 (With Animated Eyes).zip","eatinganimations_compat","file/Armor Trims Compat 1.1.zip","file/Assorted Allays x FA - V.10.0.zip","file/Beautiful Enchanted Books - MC 1.20.X - 7.0.0.zip","file/Eat Animations Aether Compat.zip","file/EnderEyes_1.21.8_v3.1.zip","file/FA+Objects-v1.1.1.zip","file/Fresh Aether 1.2.zip","file/Fresh Friends v2.1.1.zip","file/Fresh HUD.zip","file/FreshAnimations_v1.9.zip","file/FreshCompats_v1.6.zip","file/Freshly Modded 2.0.0.zip","file/FreshlyTwilighted_v1.0.0.zip","file/Visual Effects+.zip","file/enchant icons 1.20 v1.3.zip"]
+resourcePacks:["builtin/plank_consistency","builtin/emissive_ores_compatibility","vanilla","mod_resources","Moonlight Mods Dynamic Assets","builtin/add_pack_finders_test","fabric","netherexp:jne_emissive","netherexp:jne_retextures","file/fresh particles.zip","builtin/client/deep_aether_tooltips","builtin/client/deep_aether_additional_assets","file/-1.21.2 Fresh Moves v3.1 (With Animated Eyes).zip","eatinganimations_compat","file/Armor Trims Compat 1.1.zip","file/Beautiful Enchanted Books - MC 1.20.X - 7.0.0.zip","file/Eat Animations Aether Compat.zip","file/EnderEyes_1.21.8_v3.1.zip","file/FA+Objects-v1.1.1.zip","file/Fresh Aether 1.2.zip","file/Fresh Friends v2.1.1.zip","file/Fresh HUD.zip","file/FreshAnimations_v1.9.zip","file/FreshCompats_v1.6.zip","file/Freshly Modded 2.0.0.zip","file/FreshlyTwilighted_v1.0.0.zip","file/Visual Effects+.zip","file/enchant icons 1.20 v1.3.zip","file/Assorted Allays x FA - V.10.0.zip"]
 incompatibleResourcePacks:["builtin/emissive_ores_compatibility","file/fresh particles.zip","file/EnderEyes_1.21.8_v3.1.zip"]
 lastServer:mc.des.vu
 lang:en_us
@@ -143,11 +143,11 @@ key_keybind.sophisticatedbackpacks.open_backpack:key.keyboard.b
 key_keybind.sophisticatedbackpacks.inventory_interaction:key.keyboard.c
 key_keybind.sophisticatedbackpacks.tool_swap:key.keyboard.unknown
 key_keybind.sophisticatedbackpacks.sort:key.mouse.middle
-key_keybind.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.x:ALT
-key_keybind.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.z:ALT
 key_keybind.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.unknown
 key_keybind.sophisticatedbackpacks.toggle_upgrade_4:key.keyboard.unknown
 key_keybind.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.unknown
+key_keybind.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.x:ALT
+key_keybind.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.z:ALT
 key_key.stellarview.open_config_screen:key.keyboard.g
 key_equipmentcompare.key.showTooltips:key.keyboard.left.shift
 key_key.deeperdarker.boost:key.keyboard.b
@@ -193,7 +193,7 @@ key_quark.keybind.narrator_full_readout:key.keyboard.unknown
 key_quark.keybind.variant_selector:key.keyboard.r
 key_supplementaries.keybind.quiver:key.keyboard.v
 key_Inspect Key:key.keyboard.j
-soundCategory_master:1.0
+soundCategory_master:0.061467818708609234
 soundCategory_music:0.0
 soundCategory_record:1.0
 soundCategory_weather:1.0
