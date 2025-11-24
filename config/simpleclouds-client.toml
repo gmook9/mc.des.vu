@@ -114,7 +114,7 @@ showVivecraftNotice = true
 		#Used to set the target FPS with the 'Target FPS' option in 'Generation Interval'.
 		#Default: 30
 		#Range: 1 ~ 1000
-		targetMeshGenFps = 200
+		targetMeshGenFps = 1000
 
 #Debug
 [debug]

@@ -2,7 +2,7 @@
 [animations]
 	#Choose your preferred animation speed (0.5-1.5)
 	#Range: 0.5 ~ 1.5
-	animationSpeed = 1.0
+	animationSpeed = 1.15
 	#Switch speed (0-10)
 	#Range: 0.0 ~ 10.0
 	switchSpeed = 0.018
@@ -19,13 +19,13 @@
 [positions]
 	#Viewmodel X Offset
 	#Range: -10.0 ~ 10.0
-	viewmodelXOffset = 0.0
+	viewmodelXOffset = 0.2
 	#Viewmodel Y Offset
 	#Range: -10.0 ~ 10.0
-	viewmodelYOffset = 0.0
+	viewmodelYOffset = -0.1
 	#Viewmodel Z Offset
 	#Range: -10.0 ~ 10.0
-	viewmodelZOffset = 0.0
+	viewmodelZOffset = -0.225
 
 [misc]
 	#Enable MB3D compatibility mode

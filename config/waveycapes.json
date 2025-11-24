@@ -2,7 +2,7 @@
   "configVersion": 2,
   "windMode": "NONE",
   "capeStyle": "SMOOTH",
-  "capeMovement": "DUNGEONS",
+  "capeMovement": "BASIC_SIMULATION_3D",
   "gravity": 25,
   "heightMultiplier": 6,
   "straveMultiplier": 2

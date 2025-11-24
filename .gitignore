@@ -13,6 +13,7 @@ modernfix/
 /*.dat
 /*.dat_old
 /*.nbt
+*.disabled
 /usercache.json
 /usernamecache.json
 /fabricloader.log

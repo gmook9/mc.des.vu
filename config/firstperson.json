@@ -3,8 +3,8 @@
   "enabledByDefault": true,
   "xOffset": 22,
   "sneakXOffset": 24,
-  "sitXOffset": -1,
-  "renderStuckFeatures": true,
+  "sitXOffset": 22,
+  "renderStuckFeatures": false,
   "vanillaHandsMode": "ALL",
   "dynamicMode": false,
   "vanillaHandsSkipSwimming": false,
@@ -20,5 +20,6 @@
   ],
   "autoToggleModItems": [
     "exposure:camera"
-  ]
+  ],
+  "hiddenLayers": []
 }
