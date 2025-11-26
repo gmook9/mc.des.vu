@@ -5,7 +5,7 @@
   "enableRightSleeve": true,
   "enableLeftPants": true,
   "enableRightPants": true,
-  "baseVoxelSize": 1.15,
+  "baseVoxelSize": 1.105,
   "bodyVoxelWidthSize": 1.05,
   "headVoxelSize": 1.18,
   "renderDistanceLOD": 14,

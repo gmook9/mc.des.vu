@@ -22,3 +22,7 @@
 	#Control how fast blood dissapears from the screen (Default is -1% opacity per tick)
 	"Bloody Screen Opacity Rate" = 4.0
 
+[low_health_effects]
+	"Low Health Sound Effects" = false
+	"Low Health Screen Overlay" = false
+

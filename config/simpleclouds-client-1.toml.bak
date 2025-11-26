@@ -22,12 +22,53 @@ whitelistAsBlacklist = false
 #Default: true
 showVivecraftNotice = true
 
+#Performance
+[performance]
+	#EXPERIMENTAL. Uses a slightly modified algorithm that removes sync calls between chunk generator compute dispatches at the cost of higher memory usage. May result in a performance boost.
+	#Default: false
+	concurrentComputeDispatches = true
+	#Specifies if faces that are not visible to the camera should be tested during mesh generation. Settings this to off can improve performance at the cost of visual issues with shadows and storm fog.
+	#Default: false
+	testSidesThatAreOccluded = true
+	#Specifies if 'rain' beneath storm clouds should appear or not. Disabling can improve performance, especially when in VR.
+	#Default: true
+	renderStormFog = true
+	#Specifies the quality of the level of detail. A lower setting makes clouds lower quality faster.
+	#Default: HIGH
+	#Allowed Values: LOW, MEDIUM, HIGH
+	levelOfDetail = "LOW"
+	#Culls cloud chunks not visible to the player. Generally should not be disabled, but can fix visual issues when looking around fast with higher frames per mesh generation values.
+	#Default: true
+	frustumCulling = true
+	#Toggles lightning flashes that can be seen in storm fog. Disabling can lead to potential performance gains when lightning spawns.
+	#Default: true
+	stormFogLightningFlashes = true
+	#Specifies the maximum percentage of the total viewable distance transparent cubes can be generated in.
+	#Default: 50
+	#Range: 1 ~ 100
+	transparencyRenderDistancePercentage = 50
+
+	#Mesh Generation
+	[performance.mesh_generation]
+		#How the amount of frames used to generate the entire mesh is calculated. Static will use the 'Frames To Generate Mesh' option. Dynamic will calculate it automatically depending on your FPS. Target FPS will target a certain perceived framerate for mesh generation.
+		#Default: TARGET_FPS
+		#Allowed Values: STATIC, DYNAMIC, TARGET_FPS
+		generationInterval = "TARGET_FPS"
+		#Used to set the target FPS with the 'Target FPS' option in 'Generation Interval'.
+		#Default: 30
+		#Range: 1 ~ 1000
+		targetMeshGenFps = 200
+		#Specifies how many frames it should take to generate the entire cloud mesh. Higher values will improve performance at the cost of stuttery cloud movement.
+		#Default: 5
+		#Range: 1 ~ 32
+		framesToGenerateMesh = 8
+
 #Preference
 [preference]
 	#Specifies the type of world fog that should be used. Each has their own advantages and disadvantages, ranging from visual discrepancies to possible compatibility issues.
 	#Default: SCREEN_SPACE
 	#Allowed Values: VANILLA, SCREEN_SPACE, OFF
-	fogMode = "VANILLA"
+	fogMode = "SCREEN_SPACE"
 	#Specifies the angle of the rain, perpendicular to the ground. Higher values makes it more horizontal.
 	#Default: 15.0
 	#Range: 0.0 ~ 45.0
@@ -75,47 +116,6 @@ showVivecraftNotice = true
 	#Default: false
 	useSpecificSeed = false
 
-#Performance
-[performance]
-	#EXPERIMENTAL. Uses a slightly modified algorithm that removes sync calls between chunk generator compute dispatches at the cost of higher memory usage. May result in a performance boost.
-	#Default: false
-	concurrentComputeDispatches = true
-	#Specifies if faces that are not visible to the camera should be tested during mesh generation. Settings this to off can improve performance at the cost of visual issues with shadows and storm fog.
-	#Default: false
-	testSidesThatAreOccluded = false
-	#Specifies if 'rain' beneath storm clouds should appear or not. Disabling can improve performance, especially when in VR.
-	#Default: true
-	renderStormFog = true
-	#Specifies the quality of the level of detail. A lower setting makes clouds lower quality faster.
-	#Default: HIGH
-	#Allowed Values: LOW, MEDIUM, HIGH
-	levelOfDetail = "MEDIUM"
-	#Culls cloud chunks not visible to the player. Generally should not be disabled, but can fix visual issues when looking around fast with higher frames per mesh generation values.
-	#Default: true
-	frustumCulling = true
-	#Toggles lightning flashes that can be seen in storm fog. Disabling can lead to potential performance gains when lightning spawns.
-	#Default: true
-	stormFogLightningFlashes = true
-	#Specifies the maximum percentage of the total viewable distance transparent cubes can be generated in.
-	#Default: 50
-	#Range: 1 ~ 100
-	transparencyRenderDistancePercentage = 50
-
-	#Mesh Generation
-	[performance.mesh_generation]
-		#How the amount of frames used to generate the entire mesh is calculated. Static will use the 'Frames To Generate Mesh' option. Dynamic will calculate it automatically depending on your FPS. Target FPS will target a certain perceived framerate for mesh generation.
-		#Default: TARGET_FPS
-		#Allowed Values: STATIC, DYNAMIC, TARGET_FPS
-		generationInterval = "TARGET_FPS"
-		#Specifies how many frames it should take to generate the entire cloud mesh. Higher values will improve performance at the cost of stuttery cloud movement.
-		#Default: 5
-		#Range: 1 ~ 32
-		framesToGenerateMesh = 32
-		#Used to set the target FPS with the 'Target FPS' option in 'Generation Interval'.
-		#Default: 30
-		#Range: 1 ~ 1000
-		targetMeshGenFps = 1000
-
 #Debug
 [debug]
 	#Toggles rendering of the clouds.
@@ -133,11 +133,11 @@ showVivecraftNotice = true
 	#Specifies the percentage of the cloud render distance that the clouds should begin to fade away, when using the single cloud type mode (e.x. 50 would start to make the clouds fade away at half of the cloud render distance).
 	#Default: 80
 	#Range: 0 ~ 100
-	singleModeFadeStartPercentage = 80
+	singleModeFadeStartPercentage = 65
 	#Specifies the percentage of the cloud render distance that the clouds will be fully faded away, when using the single cloud type mode (e.x. 50 would make the clouds completely disappear past half the cloud render distance).
 	#Default: 100
 	#Range: 0 ~ 100
-	singleModeFadeEndPercentage = 100
+	singleModeFadeEndPercentage = 85
 
 #Distant Horizons
 [distant_horizons]
@@ -147,5 +147,5 @@ showVivecraftNotice = true
 	#Specifies the distance shadows can render.
 	#Default: 5000
 	#Range: 500 ~ 15000
-	shadowDistance = 5000
+	shadowDistance = 2560
 
