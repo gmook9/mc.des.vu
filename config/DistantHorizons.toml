@@ -12,12 +12,12 @@ _version = 3
 			[client.advanced.graphics.quality]
 				#
 				# The radius of the mod's render distance. (measured in chunks)
-				lodChunkRenderDistanceRadius = 256
+				lodChunkRenderDistanceRadius = 186
 				#
 				# This indicates how quickly LODs decrease in quality the further away they are. 
 				# Higher settings will render higher quality fake chunks farther away, 
 				# but will increase memory and GPU usage.
-				horizontalQuality = "MEDIUM"
+				horizontalQuality = "LOW"
 				#
 				# What is the maximum detail LODs should be drawn at? 
 				# Higher settings will increase memory and GPU usage. 
@@ -38,14 +38,14 @@ _version = 3
 				# 
 				# Lowest Quality: HEIGHT_MAP
 				# Highest Quality: EXTREME
-				verticalQuality = "MEDIUM"
+				verticalQuality = "LOW"
 				#
 				# How should LOD transparency be handled. 
 				# 
 				# COMPLETE: LODs will render transparent. 
 				# FAKE: LODs will be opaque, but shaded to match the blocks underneath. 
 				# DISABLED: LODs will be opaque.
-				transparency = "COMPLETE"
+				transparency = "DISABLED"
 				#
 				# What blocks shouldn't be rendered as LODs? 
 				# 
@@ -88,7 +88,7 @@ _version = 3
 				# NONE: Fastest, there will be a pronounced border between DH and MC rendering. 
 				# SINGLE_PASS: Fades after MC's transparent pass, opaque blocks underwater won't be faded. 
 				# DOUBLE_PASS: Slowest, fades after both MC's opaque and transparent passes, provides the smoothest transition.
-				vanillaFadeMode = "DOUBLE_PASS"
+				vanillaFadeMode = "SINGLE_PASS"
 				#
 				# How bright LOD colors are. 
 				# 
@@ -110,12 +110,12 @@ _version = 3
 				#     '0' equals to Vanilla Biome Blending of '1x1' or 'OFF', 
 				#     '1' equals to Vanilla Biome Blending of '3x3', 
 				#     '2' equals to Vanilla Biome Blending of '5x5'...
-				lodBiomeBlending = 3
+				lodBiomeBlending = 1
 
 			[client.advanced.graphics.ssao]
 				#
 				# Enable Screen Space Ambient Occlusion
-				enableSsao = true
+				enableSsao = false
 				#
 				# Determines how many points in space are sampled for the occlusion test. 
 				# Higher numbers will improve quality and reduce banding, but will increase GPU load.
@@ -185,7 +185,7 @@ _version = 3
 				# 0.0: Fog ends at player's position.
 				# 1.0: Fog ends at the closest edge of the vanilla render distance. 
 				# 1.414: Fog ends at the corner of the vanilla render distance.
-				farFogEnd = "0.15"
+				farFogEnd = "1.0"
 				#
 				# What is the minimum fog thickness? 
 				# 
@@ -383,12 +383,12 @@ _version = 3
 			#
 			# Should Distant Horizons silently, automatically download and install new versions? 
 			# This setting is force disabled on dedicated servers for stability reasons.
-			enableSilentUpdates = false
+			enableSilentUpdates = true
 			#
 			# If DH should use the nightly (provided by Gitlab), or stable (provided by Modrinth) build. 
 			# If [AUTO] is selected DH will update to new stable releases if the current jar is a stable jar 
 			# and will update to new nightly builds if the current jar is a nightly jar (IE the version number ends in '-dev').
-			updateBranch = "AUTO"
+			updateBranch = "NIGHTLY"
 
 		[client.advanced.debugging]
 			#
@@ -560,7 +560,7 @@ _version = 3
 		# but may cause server/simulation lag. 
 		# Note: unlike other modes this option DOES save generated chunks to 
 		# Minecraft's region files.
-		distantGeneratorMode = "FEATURES"
+		distantGeneratorMode = "INTERNAL_SERVER"
 		#
 		# How should distant generator progress be displayed? 
 		# 
@@ -689,7 +689,7 @@ _version = 3
 	[common.multiThreading]
 		#
 		# How many threads should be used by Distant Horizons?
-		numberOfThreads = 2
+		numberOfThreads = 10
 		#
 		# A value between 1.0 and 0.0 that represents the percentage 
 		# of time each thread can run before going idle. 
@@ -697,7 +697,7 @@ _version = 3
 		# This can be used to reduce CPU usage if the thread count 
 		# is already set to 1 for the given option, or more finely 
 		# tune CPU performance.
-		threadRunTimeRatio = "0.5"
+		threadRunTimeRatio = "1.0"
 
 	[common.logging]
 		#

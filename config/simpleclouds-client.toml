@@ -46,7 +46,7 @@ showVivecraftNotice = true
 	#Specifies the maximum percentage of the total viewable distance transparent cubes can be generated in.
 	#Default: 50
 	#Range: 1 ~ 100
-	transparencyRenderDistancePercentage = 50
+	transparencyRenderDistancePercentage = 15
 
 	#Mesh Generation
 	[performance.mesh_generation]
@@ -68,7 +68,7 @@ showVivecraftNotice = true
 	#Specifies the type of world fog that should be used. Each has their own advantages and disadvantages, ranging from visual discrepancies to possible compatibility issues.
 	#Default: SCREEN_SPACE
 	#Allowed Values: VANILLA, SCREEN_SPACE, OFF
-	fogMode = "SCREEN_SPACE"
+	fogMode = "VANILLA"
 	#Specifies the angle of the rain, perpendicular to the ground. Higher values makes it more horizontal.
 	#Default: 15.0
 	#Range: 0.0 ~ 45.0
@@ -133,11 +133,11 @@ showVivecraftNotice = true
 	#Specifies the percentage of the cloud render distance that the clouds should begin to fade away, when using the single cloud type mode (e.x. 50 would start to make the clouds fade away at half of the cloud render distance).
 	#Default: 80
 	#Range: 0 ~ 100
-	singleModeFadeStartPercentage = 65
+	singleModeFadeStartPercentage = 35
 	#Specifies the percentage of the cloud render distance that the clouds will be fully faded away, when using the single cloud type mode (e.x. 50 would make the clouds completely disappear past half the cloud render distance).
 	#Default: 100
 	#Range: 0 ~ 100
-	singleModeFadeEndPercentage = 85
+	singleModeFadeEndPercentage = 55
 
 #Distant Horizons
 [distant_horizons]
@@ -147,5 +147,5 @@ showVivecraftNotice = true
 	#Specifies the distance shadows can render.
 	#Default: 5000
 	#Range: 500 ~ 15000
-	shadowDistance = 2560
+	shadowDistance = 1896
 
